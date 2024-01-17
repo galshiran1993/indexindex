@@ -140,7 +140,7 @@
 <script>
     var responses1 = {}; // To store responses from the first set
     var responses2 = {}; // To store responses from the second set
-    var questionKeys = ['family','marriage','parenting','friends','work','education','fun','spirit','commun','health','envio', 'art']; // Add the rest of your question keys here
+    var questionKeys = ['family', 'marriage', 'parenting', 'friends', 'work', 'education', 'fun', 'spirit', 'commun', 'health', 'envio', 'art'];
 
     document.getElementById('form1').addEventListener('submit', function(e) {
         e.preventDefault();
@@ -158,6 +158,14 @@
         generateChart();
         showPage('resultsPage');
     });
+
+    function showPage(pageId) {
+        var pages = ['introPage', 'surveyPage1', 'surveyPage2', 'resultsPage'];
+        pages.forEach(function(page) {
+            document.getElementById(page).classList.add('hidden');
+        });
+        document.getElementById(pageId).classList.remove('hidden');
+    }
 
     function generateChart() {
         var labels = ['משפחה (מלבד נישואים או הורות)', 'נישואים/זוגיות/יחסים', 'הורות', 'חברים/חיי חברה', 'עבודה', 'השכלה', 'בילוי/כיף', 'רוחניות', 'קהילתיות', 'בריאות (אורח חיים, אימונים, שינה)', 'איכות סביבה/בעיות אקלים', 'אומנות, ביטוי יצירתי, אסטתיקה'];
@@ -188,12 +196,5 @@
             }
         });
     }
-
-    function showPage(pageId) {
-        document.getElementById('introPage').classList.add('hidden');
-        document.getElementById('surveyPage1').classList.add('hidden');
-        document.getElementById('surveyPage2').classList.add('hidden');
-        document.getElementById('resultsPage').classList.remove('hidden');
-        // If there are other pages, add them here in a similar fashion
-    }
 </script>
+
