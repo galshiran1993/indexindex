@@ -1,71 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="he">
 <head>
+    <meta charset="UTF-8">
     <title>Survey</title>
+    <style>
+        .hidden { display: none; }
+        form div { margin-bottom: 10px; }
+    </style>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-    <div id="page1">
-        <h2>Page 1: First Set of Questions</h2>
+    <!-- Introduction Page -->
+    <div id="introPage">
+        <h2>Introduction</h2>
+        <p>השאלון מורכב משני חלקים...</p>
+        <button onclick="showPage('surveyPage1')">התחלת הסקר</button>
+    </div>
+
+    <!-- First Set of Questions -->
+    <div id="surveyPage1" class="hidden">
+        <h2>דרגו את רמת החשיבות של תחום החיים בעיניכם</h2>
         <form id="form1">
             <!-- Add your first set of questions here -->
-            <!-- Example: -->
-            <label for="question1">Question 1:</label>
-            <input type="number" id="question1" name="question1" min="1" max="10" required>
-            <!-- Add more questions as needed -->
-            <input type="submit" value="Next">
+            <div>
+                <label for="family">משפחה (מלבד נישואים או זוגיות):</label>
+                <input type="number" id="family" name="family" min="1" max="10" required>
+            </div>
+            <!-- ... More questions ... -->
+            <div>
+                <label for="art">אומנות, ביטוי יצירתי, אסתטיקה:</label>
+                <input type="number" id="art" name="art" min="1" max="10" required>
+            </div>
+            <input type="submit" value="לעמוד הבא">
         </form>
     </div>
 
-    <div id="page2" style="display: none;">
-        <h2>Page 2: Second Set of Questions</h2>
+    <!-- Second Set of Questions -->
+    <div id="surveyPage2" class="hidden">
+        <h2>דרגו את מידת עקביות הפעולות שלכם...</h2>
         <form id="form2">
             <!-- Add your second set of questions here -->
-            <!-- Example: -->
-            <label for="question2">Question 2:</label>
-            <input type="number" id="question2" name="question2" min="1" max="10" required>
-            <!-- Add more questions as needed -->
-            <input type="submit" value="Submit">
+            <div>
+                <label for="family_consistency">משפחה (עקביות):</label>
+                <input type="number" id="family_consistency" name="family_consistency" min="1" max="10" required>
+            </div>
+            <!-- ... More questions ... -->
+            <div>
+                <label for="art_consistency">אומנות, ביטוי יצירתי, עקביות:</label>
+                <input type="number" id="art_consistency" name="art_consistency" min="1" max="10" required>
+            </div>
+            <input type="submit" value="לראות תוצאות">
         </form>
     </div>
 
-    <div id="page3" style="display: none;">
-        <h2>Results</h2>
+    <!-- Results Page -->
+    <div id="resultsPage" class="hidden">
+        <h2>תוצאות</h2>
         <canvas id="resultsChart"></canvas>
     </div>
 
     <script>
-        // JavaScript for handling the survey navigation and chart generation
+        var responses1 = {}; // To store responses from the first set
+        var responses2 = {}; // To store responses from the second set
+        var questionKeys = ['family', 'art']; // Add the rest of your question keys here
 
         document.getElementById('form1').addEventListener('submit', function(e) {
             e.preventDefault();
-            // Process and store responses from form1
-            // ...
-
-            // Hide page 1 and show page 2
-            document.getElementById('page1').style.display = 'none';
-            document.getElementById('page2').style.display = 'block';
+            questionKeys.forEach(function(key) {
+                responses1[key] = document.getElementById(key).value;
+            });
+            showPage('surveyPage2');
         });
 
         document.getElementById('form2').addEventListener('submit', function(e) {
             e.preventDefault();
-            // Process responses from form2
-            // ...
+            questionKeys.forEach(function(key) {
+                responses2[key] = document.getElementById(key + '_consistency').value;
+            });
+            generateChart();
+            showPage('resultsPage');
+        });
 
-            // Generate chart based on responses from both forms
+        function generateChart() {
+            var labels = ['משפחה', 'אומנות']; // Add the rest of your labels here
+            var data1 = questionKeys.map(key => responses1[key]);
+            var data2 = questionKeys.map(key => responses2[key]);
+
             var ctx = document.getElementById('resultsChart').getContext('2d');
-            var myChart = new Chart(ctx, {
+            new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Q1', 'Q2'], // Update with your question labels
+                    labels: labels,
                     datasets: [{
-                        label: 'First Set',
-                        data: [/* Data from form1 */],
+                        label: 'Set 1',
+                        data: data1,
                         backgroundColor: 'rgba(255, 99, 132, 0.5)'
                     }, {
-                        label: 'Second Set',
-                        data: [/* Data from form2 */],
+                        label: 'Set 2',
+                        data: data2,
                         backgroundColor: 'rgba(54, 162, 235, 0.5)'
                     }]
                 },
@@ -77,12 +110,15 @@
                     }
                 }
             });
+        }
 
-            // Hide page 2 and show results page
-            document.getElementById('page2').style.display = 'none';
-            document.getElementById('page3').style.display = 'block';
-        });
+        function showPage(pageId) {
+            document.getElementById('introPage').classList.add('hidden');
+            document.getElementById('surveyPage1').classList.add('hidden');
+            document.getElementById('surveyPage2').classList.add('hidden');
+            document.getElementById('resultsPage').classList.add('hidden');
+            document.getElementById(pageId).classList.remove('hidden');
+        }
     </script>
-
 </body>
 </html>
