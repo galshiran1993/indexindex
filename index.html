@@ -13,74 +13,58 @@
 
     <!-- Introduction Page -->
     <div id="introPage">
-        <h2>Introduction</h2>
-        <p>
-            השאלון מורכב משני חלקים, כאשר החלק הראשון מוקדש להגדרת הערכים שלך. החלק השני מתייחס לאיך בפועל אתה מתנהג בהתאם לערכים שלך
-ההנחיות למילוי השאלון- עדיף למלא לבד, כדי שאפשר יהיה לענות בכנות ככל שניתן, לשים בצד כמה שניתן לחצים חברתיים ואת האמירות המנטליות של "צריך" ו"צריך", זה בינך לבין עצמך. אם אתם מוצאים את עצמכם מלקים את עצמכם במהלך המילוי, צעדו אחורה והזכירו לעצמכם שערכים הם מה שאתם בוחרים לעבוד לקראתו,
-            
-            לא מה שהמוח אומר שאתם צריכים לעשות או לדאוג לו או משהו אחר.
-החלק הראשון השאלון כולל 12 תחומי חיים שיכולים להוות ערכים עבור אנשים מסוימים. דרג את החשיבות של כל תחום (על ידי הקף מספר) בסולם של 1-10. 1 אומר שהתחום אינו חשוב כלל. 10 אומר שהתחום חשוב מאוד.
-            
-            לא לכולם יהיו ערכים בולטים בכל התחומים הללו, או שיהיה אכפת מכל התחומים באותה מידה. דרג כל תחום לפי תחושת החשיבות האישית שלך.
-
-בחלק השני של השאלון נרצה לתת דירוג של מידת עקביות הפעולות שלנו עם הערכים בכל אחד מהתחומים הללו. אנחנו לא שואלים על האידיאל בכל תחום. אנחנו גם לא שואלים מה אחרים חושבים עליך. כולם מצליחים יותר בתחומים מסוימים מאשר באחרים. אנשים גם מצליחים לפעמים יותר מאשר בזמנים אחרים. 
-            
-            אנחנו רוצים לדעת איך אתם חושבים שהלך לכם במהלך השבוע האחרון.
-זהו תהליך גילוי לא תהליך ביקורת, ואחרי הכל, יצאתם למסע הזה - תנו לעצמכם קצת קרדיט על כך.
-            
-            אתם כאן כדי לאמץ את השינוי.
-אם ציינתם בלא מעט מהתחומים כנמוכים בחשיבותם עבורכם, עליכם לשקול האם הייתם כנים עם עצמכם לגביהם.
-            זה הגיוני לחלוטין שיהיו כמה תחומים שאינם חשובים. 
-            אולי לא אכפת לנו מהקהילתיות, או מהסביבה, ואם אין לנו ילדים, אולי לא אכפת לך משיטות ההורות של אחרים וכו'. 
-            
-            עם זאת, מחקרים מראים שאם רבים מהתחומים הללו אינם חשובים, זה מרמז על מצוקה פסיכולוגית. השתמש בהערכה זו כהזדמנות להודות בפני עצמך בערכים האמיתיים שלך. </p>
-        
+        <!-- Introduction content here -->
         <button onclick="showPage('surveyPage1')">התחלת הסקר</button>
     </div>
-    <div>
-
 
     <!-- First Set of Questions -->
     <div id="surveyPage1" class="hidden">
         <h2>דרגו את רמת החשיבות של תחום החיים בעיניכם</h2>
         <form id="form1">
-            <!-- Add your first set of questions here -->
             <div>
-            </div>
                 <label for="family">משפחה (מלבד נישואים או זוגיות):</label>
                 <input type="number" id="family" name="family" min="1" max="10" required>
-            <div>
             </div>
+            <div>
                 <label for="marriage">נישואים/זוגיות/יחסים:</label>
                 <input type="number" id="marriage" name="marriage" min="1" max="10" required>
-            <div>
             </div>
+            <div>
                 <label for="parenting">הורות:</label>
                 <input type="number" id="parenting" name="parenting" min="1" max="10" required>
             </div>
+            <div>
                 <label for="friends">חברים/חיי חברה:</label>
                 <input type="number" id="friends" name="friends" min="1" max="10" required>
             </div>
+            <div>
                 <label for="work">עבודה:</label>
                 <input type="number" id="work" name="work" min="1" max="10" required>
             </div>
+            <div>
                 <label for="education">השכלה:</label>
                 <input type="number" id="education" name="education" min="1" max="10" required>
             </div>
+            <div>
                 <label for="fun">בילוי/כיף:</label>
                 <input type="number" id="fun" name="fun" min="1" max="10" required>
             </div>
+            <div>
                 <label for="spirit">רוחניות:</label>
                 <input type="number" id="spirit" name="spirit" min="1" max="10" required>
             </div>
+            <div>
                 <label for="commun">קהילתיות:</label>
                 <input type="number" id="commun" name="commun" min="1" max="10" required>
             </div>
+            <div>
                 <label for="health">בריאות (אורח חיים, אימונים שינה):</label>
                 <input type="number" id="health" name="health" min="1" max="10" required>
             </div>
+            <div>
                 <label for="envio">איכות סביבה/בעיות אקלים:</label>
                 <input type="number" id="envio" name="envio" min="1" max="10" required>
+            </div>
             <div>
                 <label for="art">אומנות, ביטוי יצירתי, אסתטיקה:</label>
                 <input type="number" id="art" name="art" min="1" max="10" required>
@@ -89,118 +73,125 @@
         </form>
     </div>
 
-    <!-- Second Set of Questions -->
-    <div id="surveyPage2" class="hidden">
-        <h2>דרגו את מידת עקביות הפעולות שלכם עם הערכים בכל אחד מהתחומים הללו  לפי השבוע האחרון</h2>
-        <form id="form2">
-            <!-- Add your second set of questions here -->
+<!-- Second Set of Questions -->
+<div id="surveyPage2" class="hidden">
+    <h2>דרגו את מידת עקביות הפעולות שלכם עם הערכים בכל אחד מהתחומים הללו  לפי השבוע האחרון</h2>
+    <form id="form2">
+        <div>
+            <label for="family2">משפחה (מלבד נישואים או זוגיות):</label>
+            <input type="number" id="family2" name="family2" min="1" max="10" required>
+        </div>
+        <div>
+            <label for="marriage2">נישואים/זוגיות/יחסים:</label>
+            <input type="number" id="marriage2" name="marriage2" min="1" max="10" required>
+        </div>
+        <div>
+            <label for="parenting2">הורות:</label>
+            <input type="number" id="parenting2" name="parenting2" min="1" max="10" required>
+        </div>
+        <div>
+            <label for="friends2">חברים/חיי חברה:</label>
+            <input type="number" id="friends2" name="friends2" min="1" max="10" required>
+        </div>
+        <div>
+            <label for="work2">עבודה:</label>
+            <input type="number" id="work2" name="work2" min="1" max="10" required>
+        </div>
+        <div>
+            <label for="education2">השכלה:</label>
+            <input type="number" id="education2" name="education2" min="1" max="10" required>
+        </div>
+        <div>
+            <label for="fun2">בילוי/כיף:</label>
+            <input type="number" id="fun2" name="fun2" min="1" max="10" required>
+        </div>
+        <div>
+            <label for="spirit2">רוחניות:</label>
+            <input type="number" id="spirit2" name="spirit2" min="1" max="10" required>
+        </div>
+        <div>
+            <label for="commun2">קהילתיות:</label>
+            <input type="number" id="commun2" name="commun2" min="1" max="10" required>
+        </div>
+        <div>
+            <label for="health2">בריאות (אורח חיים, אימונים שינה):</label>
+            <input type="number" id="health2" name="health2" min="1" max="10" required>
+        </div>
+        <div>
+            <label for="envio2">איכות סביבה/בעיות אקלים:</label>
+            <input type="number" id="envio2" name="envio2" min="1" max="10" required>
+        </div>
+        <div>
+            <label for="art2">אומנות, ביטוי יצירתי, אסתטיקה:</label>
+            <input type="number" id="art2" name="art2" min="1" max="10" required>
+        </div>
+        <input type="submit" value="לעמוד הבא">
+    </form>
+</div>
 
-            <div>
-                <label for="family2">משפחה (מלבד נישואים או זוגיות):</label>
-                <input type="number" id="family2" name="family2" min="1" max="10" required>
-            </div>
-                <label for="marriage2">נישואים/זוגיות/יחסים:</label>
-                <input type="number" id="marriage2" name="marriage2" min="1" max="10" required>
-            </div>
-                <label for="parenting2">הורות:</label>
-                <input type="number" id="parenting2" name="parenting2" min="1" max="10" required>
-            </div>
-                <label for="friends2">חברים/חיי חברה:</label>
-                <input type="number" id="friends2" name="friends2" min="1" max="10" required>
-            </div>
-                <label for="work2">עבודה:</label>
-                <input type="number" id="work2" name="work2" min="1" max="10" required>
-            </div>
-                <label for="education2">השכלה:</label>
-                <input type="number" id="education2" name="education2" min="1" max="10" required>
-            </div>
-                <label for="fun2">בילוי/כיף:</label>
-                <input type="number" id="fun2" name="fun2" min="1" max="10" required>
-            </div>
-                <label for="spirit2">רוחניות:</label>
-                <input type="number" id="spirit2" name="spirit2" min="1" max="10" required>
-            </div>
-                <label for="commun2">קהילתיות:</label>
-                <input type="number" id="commun2" name="commun2" min="1" max="10" required>
-            </div>
-                <label for="health2">בריאות (אורח חיים, אימונים שינה):</label>
-                <input type="number" id="health2" name="health2" min="1" max="10" required>
-            </div>
-                <label for="envio2">איכות סביבה/בעיות אקלים:</label>
-                <input type="number" id="envio2" name="envio2" min="1" max="10" required>
-            <div>
-                <label for="art2">אומנות, ביטוי יצירתי, אסתטיקה:</label>
-                <input type="number" id="art2" name="art2" min="1" max="10" required>
-            </div>
-            <input type="submit" value="לעמוד הבא">
-        </form>
-    </div>
-    
     <!-- Results Page -->
-    <div id="resultsPage" class="hidden">
-        <h2>תוצאות</h2>
-        <canvas id="resultsChart"></canvas>
-    </div>
+<div id="resultsPage" class="hidden">
+    <h2>תוצאות</h2>
+    <canvas id="resultsChart"></canvas>
+</div>
 
-    <script>
-        var responses1 = {}; // To store responses from the first set
-        var responses2 = {}; // To store responses from the second set
-        var questionKeys = ['family','marriage','parenting','friends','work','education','fun','spirit','commun','health','envio', 'art']; // Add the rest of your question keys here
+<script>
+    var responses1 = {}; // To store responses from the first set
+    var responses2 = {}; // To store responses from the second set
+    var questionKeys = ['family','marriage','parenting','friends','work','education','fun','spirit','commun','health','envio', 'art']; // Add the rest of your question keys here
 
-        document.getElementById('form1').addEventListener('submit', function(e) {
-            e.preventDefault();
-            questionKeys.forEach(function(key) {
-                responses1[key] = document.getElementById(key).value;
-            });
-            showPage('surveyPage2');
+    document.getElementById('form1').addEventListener('submit', function(e) {
+        e.preventDefault();
+        questionKeys.forEach(function(key) {
+            responses1[key] = document.getElementById(key).value;
         });
+        showPage('surveyPage2');
+    });
 
-        document.getElementById('form2').addEventListener('submit', function(e) {
-            e.preventDefault();
-            questionKeys.forEach(function(key) {
-                responses2[key] = document.getElementById(key + '2').value;
-            });
-            generateChart();
-            showPage('resultsPage');
+    document.getElementById('form2').addEventListener('submit', function(e) {
+        e.preventDefault();
+        questionKeys.forEach(function(key) {
+            responses2[key] = document.getElementById(key + '2').value;
         });
+        generateChart();
+        showPage('resultsPage');
+    });
 
-        function generateChart() {
-            var labels = ['משפחה (מלבד נישואים או הורות)', 'נישואים/זוגיות/יחסים', 'הורות', 'חברים/חיי חברה', 'עבודה', 'השכלה', 'בילוי/כיף', 'רוחניות', 'קהילתיות', 'בריאות (אורח חיים, אימונים, שינה)', 'איכות סביבה/בעיות אקלים', 'אומנות, ביטוי יצירתי, אסטתיקה']; // Add the rest of your labels here
-            var data1 = questionKeys.map(key => responses1[key]);
-            var data2 = questionKeys.map(key => responses2[key]);
+    function generateChart() {
+        var labels = ['משפחה (מלבד נישואים או הורות)', 'נישואים/זוגיות/יחסים', 'הורות', 'חברים/חיי חברה', 'עבודה', 'השכלה', 'בילוי/כיף', 'רוחניות', 'קהילתיות', 'בריאות (אורח חיים, אימונים, שינה)', 'איכות סביבה/בעיות אקלים', 'אומנות, ביטוי יצירתי, אסטתיקה']; // Add the rest of your labels here
+        var data1 = questionKeys.map(key => responses1[key]);
+        var data2 = questionKeys.map(key => responses2[key]);
 
-            var ctx = document.getElementById('resultsChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        label: 'Set 1',
-                        data: data1,
-                        backgroundColor: 'rgba(255, 99, 132, 0.5)'
-                    }, {
-                        label: 'Set 2',
-                        data: data2,
-                        backgroundColor: 'rgba(54, 162, 235, 0.5)'
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
+        var ctx = document.getElementById('resultsChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Set 1',
+                    data: data1,
+                    backgroundColor: 'rgba(255, 99, 132, 0.5)'
+                }, {
+                    label: 'Set 2',
+                    data: data2,
+                    backgroundColor: 'rgba(54, 162, 235, 0.5)'
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
                     }
                 }
-            });
-        }
+            }
+        });
+    }
 
-        function showPage(pageId) {
-            document.getElementById('introPage').classList.add('hidden');
-            document.getElementById('surveyPage1').classList.add('hidden');
-            document.getElementById('surveyPage2').classList.add('hidden');
-            document.getElementById('resultsPage').classList.add('hidden');
-            document.getElementById(pageId).classList.remove('hidden');
-        }
-    </script>
-</body>
-</html>
+    function showPage(pageId) {
+        document.getElementById('introPage').classList.add('hidden');
+        document.getElementById('surveyPage1').classList.add('hidden');
+        document.getElementById('surveyPage2').classList.add('hidden');
+        document.getElementById('resultsPage').classList.remove('hidden');
+        // If there are other pages, add them here in a similar fashion
+    }
+</script>
