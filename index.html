@@ -91,41 +91,41 @@
             <!-- Add your second set of questions here -->
 
             <div>
-                <label for="family">משפחה (מלבד נישואים או זוגיות):</label>
-                <input type="number" id="family" name="family" min="1" max="10" required>
+                <label for="family2">משפחה (מלבד נישואים או זוגיות):</label>
+                <input type="number" id="family2" name="family2" min="1" max="10" required>
             </div>
-                <label for="marriage">נישואים/זוגיות/יחסים:</label>
-                <input type="number" id="marriage" name="marriage" min="1" max="10" required>
+                <label for="marriage2">נישואים/זוגיות/יחסים:</label>
+                <input type="number" id="marriage2" name="marriage2" min="1" max="10" required>
             </div>
-                <label for="parenting">הורות:</label>
-                <input type="number" id="parenting" name="parenting" min="1" max="10" required>
+                <label for="parenting2">הורות:</label>
+                <input type="number" id="parenting2" name="parenting2" min="1" max="10" required>
             </div>
-                <label for="friends">חברים/חיי חברה:</label>
-                <input type="number" id="friends" name="friends" min="1" max="10" required>
+                <label for="friends2">חברים/חיי חברה:</label>
+                <input type="number" id="friends2" name="friends2" min="1" max="10" required>
             </div>
-                <label for="work">עבודה:</label>
-                <input type="number" id="work" name="work" min="1" max="10" required>
+                <label for="work2">עבודה:</label>
+                <input type="number" id="work2" name="work2" min="1" max="10" required>
             </div>
-                <label for="education">השכלה:</label>
-                <input type="number" id="education" name="education" min="1" max="10" required>
+                <label for="education2">השכלה:</label>
+                <input type="number" id="education2" name="education2" min="1" max="10" required>
             </div>
-                <label for="fun">בילוי/כיף:</label>
-                <input type="number" id="fun" name="fun" min="1" max="10" required>
+                <label for="fun2">בילוי/כיף:</label>
+                <input type="number" id="fun2" name="fun2" min="1" max="10" required>
             </div>
-                <label for="spirit">רוחניות:</label>
-                <input type="number" id="spirit" name="spirit" min="1" max="10" required>
+                <label for="spirit2">רוחניות:</label>
+                <input type="number" id="spirit2" name="spirit2" min="1" max="10" required>
             </div>
-                <label for="commun">קהילתיות:</label>
-                <input type="number" id="commun" name="commun" min="1" max="10" required>
+                <label for="commun2">קהילתיות:</label>
+                <input type="number" id="commun2" name="commun2" min="1" max="10" required>
             </div>
-                <label for="health">בריאות (אורח חיים, אימונים שינה):</label>
-                <input type="number" id="health" name="health" min="1" max="10" required>
+                <label for="health2">בריאות (אורח חיים, אימונים שינה):</label>
+                <input type="number" id="health2" name="health2" min="1" max="10" required>
             </div>
-                <label for="envio">איכות סביבה/בעיות אקלים:</label>
-                <input type="number" id="envio" name="envio" min="1" max="10" required>
+                <label for="envio2">איכות סביבה/בעיות אקלים:</label>
+                <input type="number" id="envio2" name="envio2" min="1" max="10" required>
             <div>
-                <label for="art">אומנות, ביטוי יצירתי, אסתטיקה:</label>
-                <input type="number" id="art" name="art" min="1" max="10" required>
+                <label for="art2">אומנות, ביטוי יצירתי, אסתטיקה:</label>
+                <input type="number" id="art2" name="art2" min="1" max="10" required>
             </div>
             <input type="submit" value="לעמוד הבא">
         </form>
@@ -153,7 +153,7 @@
         document.getElementById('form2').addEventListener('submit', function(e) {
             e.preventDefault();
             questionKeys.forEach(function(key) {
-                responses2[key] = document.getElementById(key + '_consistency').value;
+                responses2[key] = document.getElementById(key + '2').value;
             });
             generateChart();
             showPage('resultsPage');
